@@ -14,6 +14,9 @@ export class AppComponent {
 
   onToggleButton() {
     this.activatedButton = true;
-    this.secret.push(this.secret.length + 1);
+    // increment secret with 1
+    // this.secret.push(this.secret.length + 1);
+    // push current timestamp after click
+    this.secret.push(new Date());
   }
 }

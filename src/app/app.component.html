@@ -21,8 +21,8 @@
     <div class="col-xs-4">
       <button class="btn btn-primary" [hidden]="!isHidden" (click)="onToggleButton()">Display Details</button>
       <p *ngIf="activatedButton">{{ password }}</p>
-      <p *ngFor="let secretItem of secret"
-      [ngStyle]="{color: secretItem >= 5 ? 'green' : 'red'}">{{ secretItem }}</p>
+      <p *ngFor="let secretItem of secret; let i = index"
+      [ngStyle]="{color: i >= 5 ? 'green' : 'red'}">{{ secretItem }}</p>
     </div>
   </div>
 </div>
